@@ -33,7 +33,7 @@ App(X)</br>
 Routes(X)</br>
 Reducers( - Em desenvolvimento - : Faltando ajuste )</br>
 Class( --Em desenvolvimento : a classe chamada nesse momento esta fixa)</br>
-Actions( --Em desenvolvimento : Faltando criar action/funçoes para utilizar o React com redux para poder contrallar as props) </br>
+Actions( --Em desenvolvimento : Faltando criar action/funçoes para utilizar o React com redux para poder controlar as props) </br>
 
 
 
