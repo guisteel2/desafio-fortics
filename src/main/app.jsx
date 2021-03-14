@@ -7,25 +7,28 @@ import React , { Component } from 'react'
 import Header from '../template/pageHeader'
 import Chat from '../template/chat/chat'
 
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
 
 
+// const login = props => {
+//     console.log('----?----');
+//     console.log(props);
+//     return (
+//     )
+// }
 
-export default class App extends Component {
+class App extends Component {
 
-    constructor(props){
-        super(props)
-        this.state = {  description: 'Deslogado',
-                        nome: '',
-                        email:'',
-                        list:[]}
-
-        this.validUser = this.validUser.bind(this);
-        this.addNome = this.addNome.bind(this);
-        this.addEmail = this.addEmail.bind(this);
-    }
+    constructor(state) {
+        super();
+        
+      };
+      
 
     check(){
         var visivel  = $('.fixed-bottom').css("display");
+        alert(this);
         if(visivel == "none"){
             $('.fixed-bottom').show();
             $('.open').hide()
@@ -33,10 +36,17 @@ export default class App extends Component {
             $('.fixed-bottom').hide();
             $('.open').show();
         }
+        
+        if(this.state.description == "Deslogado"){
+            alert('Deslogado')
+        }else{
+            alert('Logado')
+        }
+
     }
 
     validUser(){
-        console.log(this.state);
+        console.log('-------------------kkkkkkkkkkkkk');
         if(this.state.description == "Deslogado"){
             this.setState({...this.state, description: "Logado"})
         }else{
@@ -53,20 +63,19 @@ export default class App extends Component {
     }
 
    
-    
     render(){
         return (
                 <div className='contender'>
                     <Header />
                     <Routes />
-                    <Chat   check={this.check} 
-                            user={this.state.description} 
-                            validUser={this.validUser}
-                            addNome={this.addNome} 
-                            addEmail={this.addEmail}
-                    />
+                    <Chat   check={this.check} validUser={this.validUser}/>
                 </div>
         )
     }
 
 }
+
+const mapStateToProps = state =>({list: state.todo.list})
+const mapDispatchToProps = dispatch => 
+    bindActionCreators({}, dispatch)
+export default connect(mapStateToProps, mapDispatchToProps)(App)

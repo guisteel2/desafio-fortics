@@ -41,6 +41,7 @@ html {
     margin-top: 0px;
     width: 100%;
 }
+
 .contender{
     display: flex;
     flex-direction: column;
@@ -108,6 +109,11 @@ html {
         left: 0;
         bottom: 0;
         animation: MoveUpDown 2s linear infinite;
+    }
+
+    .Mgs .panel-body {
+        height: 370px;
+        overflow: auto;
     }
 
     @keyframes MoveUpDown {

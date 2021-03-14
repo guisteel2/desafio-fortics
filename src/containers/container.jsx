@@ -1,10 +1,13 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { } from '../Actions/Actions'
+
 
 const usuarios = props => {
 
     const ListaUsuario = () =>{
-        const list = props.list || []
+        const list = props.list
         return list.map(todo =>(
             <tr key={todo._id}>
                 <th scope="row">{todo._id}</th>
@@ -15,7 +18,7 @@ const usuarios = props => {
             )
         )
     }
-
+    
     return (
         <div className="gridForm">
            <table className="table">
@@ -36,4 +39,6 @@ const usuarios = props => {
 }
 
 const mapStateToProps = state =>({list: state.todo.list})
-export default connect(mapStateToProps)(usuarios)
+const mapDispatchToProps = dispatch => 
+    bindActionCreators({ }, dispatch)
+export default connect(mapStateToProps, mapDispatchToProps)(usuarios)

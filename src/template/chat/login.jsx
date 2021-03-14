@@ -1,13 +1,15 @@
 import React from 'react'
-
 import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { validUser, changeUsername, changeUseremail, addUser } from '../../Actions/Actions'
 
 const login = props => {
-
+   
     return (
         <div>
             <div className="panel-body">
-            <div data-toggle="tooltip" data-placement="top" title="Fechar"><a onClick={props.check} ><input className="close fas fa-times"></input></a></div>
+            {/* <div data-toggle="tooltip" data-placement="top" title="Fechar"><a onClick={props.check} ><input className="close fas fa-times"></input></a></div> */}
+            <div data-toggle="tooltip" data-placement="top" title="Fechar"><a><input className="close fas fa-times"></input></a></div>
                 <div className="chats">
                   <div className="login">         
                     <div>
@@ -19,10 +21,11 @@ const login = props => {
                         <form className="form-signin">
             
                             <label className="sr-only">Endereço de email</label>
-                            <input value={props.email} onChange= { props.addEmail } type="email" id="inputEmail" className="form-control" placeholder="Endereço de email" />
+                            <input value={props.email} onChange= { props.changeUseremail } type="email" id="inputEmail" className="form-control" placeholder="Endereço de email" />
+                            
                             <label className="sr-only">Nome</label>
-                            <input value={props.nome}  onChange= { props.addNome } type="nome" id="inputName" className="form-control" placeholder="Nome"  />
-
+                            <input value={props.nome}  onChange= { props.changeUsername } type="nome" id="inputName" className="form-control" placeholder="Nome"  />
+                            <div>{ props.nomeError}</div>
                             <a className="btn btn-primary" type="submit" onClick={ props.validUser }>Iniciar</a>
                             <p className="mt-5 mb-3 text-muted">© 2021-2021</p>
 
@@ -36,5 +39,6 @@ const login = props => {
         )
 }
 
-const mapStateToProps = state =>({nome: state.todo.nome, email: state.todo.email})
-export default connect(mapStateToProps)(login)
+const mapStateToProps = state =>({nome: state.todo.nome, email: state.todo.email, errorNome: state.todo.errorNome })
+const mapDispatchtoProps = dispatch =>bindActionCreators({validUser, changeUsername, changeUseremail, addUser }, dispatch)
+export default connect(mapStateToProps, mapDispatchtoProps)(login)

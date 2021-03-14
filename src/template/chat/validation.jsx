@@ -1,17 +1,24 @@
 import React from 'react'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+
 import OnChat from './onChat'
 import Logar from './login'
 
-export default props => {
+
+const validation = props => {
 
     if(props.user == 'Logado' ){
-        
         return (
-                 <OnChat check={props.check} validUser={props.validUser} /> 
+                 <OnChat /> 
         )
     }else{
         return (
-                <Logar check={props.check} validUser={props.validUser} addNome={props.addNome} addEmail={props.addEmail} />              
+                <Logar />              
         )
     }
 }
+
+const mapStateToProps = state =>({user: state.todo.description})
+const mapDispatchtoProps = dispatch =>bindActionCreators({}, dispatch)
+export default connect(mapStateToProps, mapDispatchtoProps)(validation)
