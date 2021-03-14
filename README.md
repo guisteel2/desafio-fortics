@@ -2,7 +2,7 @@
 
 **Como executar?
 
-1º Clone o repositorio em sua maquina: git clone https://github.com/guisteel2/desafio-fortics.git.
+1º Clone o repositorio em sua maquina: git clone https://github.com/guisteel2/desafio-fortics.git.</br>
 2º Abra o codigo onde foi clonado atraves da Prompt de Comando </br>
 3º Na Prompt de Comando inicie o comando -> npm install </br>
 4º Na Prompt de Comando ainda, inicie com -> npm run dev </br>
