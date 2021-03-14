@@ -1,6 +1,7 @@
 **Em desenvolvimento
 
 **Como executar?
+
 1º Clone o repositorio em sua maquina: git clone https://github.com/guisteel2/desafio-fortics.git.
 2º Abra o codigo onde foi clonado atraves da Prompt de Comando 
 3º Na Prompt de Comando inicie o comando -> npm install
@@ -9,13 +10,16 @@
 
 
 
-Oque ja esta desenvolvido?
+**Oque ja esta desenvolvido?
+
 Layout -> Telas : Template  ->header(routes de 2 pagina para poder verificar o chat em ambas as pagignas)
                             ->containers(Pagina para ver os usuario que ja entrarao no chat)
                             ->chat(Ajuste no Layout para ambas as paginas"Verificar->Login/Onchat, que vai determinar se o usuario esta ou nao logado")
 
 
-Modelo do chat: Paginas->Login(Ja esta vinculando seus campos com a class"sem validação" mas com metodos de alterar classe(alguns parametro que sera mudado/adicionados prevemente))
+**Modelo do chat: 
+            
+                  Paginas->Login(Ja esta vinculando seus campos com a class"sem validação" mas com metodos de alterar classe(alguns parametro que sera mudado/adicionados prevemente))
                 Paginas->onChat(Pagina estaticas ainda á parametros nem chamadas nela apenas um modelo como sera a conversa)
 
 
