@@ -1,0 +1,335 @@
+html {
+    height: 100% !important;
+}
+
+.body{
+    height: 100%!important; 
+    width: 100%!important;
+}
+#app{
+    height: 100%!important; 
+}
+
+.navbar-brand{
+    margin: auto;
+    height: 90px;
+    display: flex;
+    overflow: auto;
+}
+
+.navbar-brand>img{
+    width: 250px;
+    height: 60px;
+}
+
+.fixed-bottom{
+    display: none;
+    left: 20%;
+    margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 993px) {
+    .collapse{
+        max-width: 10%;
+    }
+
+    
+}
+
+.gridForm{
+    margin: auto;
+    margin-top: 0px;
+    width: 100%;
+}
+.contender{
+    display: flex;
+    flex-direction: column;
+    height: 100%!important;
+    max-width: 100%!important;
+    padding: 0px;
+    margin: 0px;
+}
+
+.navbar{
+    border-radius:0px
+}
+
+
+
+
+
+/* CHAT */
+    .open{
+        margin-bottom: 20px;
+        position: absolute;
+        bottom: 0;
+        width: 95%;
+    }
+    .open .check{
+        width: 66px;
+        height: 65px;
+        border-radius: 100% !important;
+        background-color: #197fbc;
+        float: right;
+    }
+
+    .open .check:hover{
+
+        border-style: none;
+    }
+
+    .chat{
+        border-radius: 10px;
+        background-color: #d9e0e5 !important;
+        border-top-left-radius: 42px;
+        border-top-right-radius: 42px;
+        max-width: 330px;
+        float: inherit;
+    }
+    .chat-box {
+        height: 100%;
+        width: 100%;
+        background-color: #fff;
+        overflow: hidden
+    }
+    
+    .chats {
+        padding: 30px 15px;
+    }
+
+    .login{
+        text-align: center;
+    }
+
+    .login>div>img{
+        width: 100px;
+        height: 140px;
+        position: relative;
+        left: 0;
+        bottom: 0;
+        animation: MoveUpDown 2s linear infinite;
+    }
+
+    @keyframes MoveUpDown {
+        0%, 100% {
+          bottom: 0;
+        }
+        50% {
+          bottom: 30px;
+        }
+    }
+
+
+
+    .login>div>h1{
+        font-size: 25px;
+    }
+
+    .login .form-signin>input{
+        margin-top: 5px;
+        margin-bottom: 5px;
+        border-radius: 20px;
+    }
+    .login .form-signin .btn-primary {
+        border: 1px solid transparent;
+        border-radius: 20px;
+        width: 100%;
+        color: white;
+    
+    }
+    
+    .chatcorp{
+        float:right;
+    }
+    .chat-avatar {
+        float: right;
+    }
+    
+    .chat-avatar .avatar {
+        width: 30px;
+        -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2),0 6px 10px 0 rgba(0,0,0,0.3);
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2),0 6px 10px 0 rgba(0,0,0,0.3);
+    }
+    
+    .chat-body {
+        display: block;
+        margin: 10px 30px 0 0;
+        overflow: hidden;
+    }
+    
+    .chat-body:first-child {
+        margin-top: 0;
+    }
+    
+    .chat-content {
+        position: relative;
+        display: block;
+        float: right;
+        padding: 8px 15px;
+        margin: 0 20px 10px 0;
+        clear: both;
+        color: #fff;
+        background-color: #62a8ea;
+        border-radius: 4px;
+            -webkit-box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
+        box-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
+    }
+    
+    .chat-content:before {
+        position: absolute;
+        top: 10px;
+        right: -10px;
+        width: 0;
+        height: 0;
+        content: '';
+        border: 5px solid transparent;
+        border-left-color: #62a8ea;
+    }
+    
+    .chat-content>p:last-child {
+        margin-bottom: 0;
+    }
+    
+    .chat-content+.chat-content:before {
+        border-color: transparent;
+    }
+    
+    .chat-time {
+        display: block;
+        margin-top: 8px;
+        color: rgba(255, 255, 255, .6);
+    }
+    
+    .chat-left .chat-avatar {
+        float: left;
+    }
+    
+    .chat-left .chat-body {
+        margin-right: 0;
+        margin-left: 30px;
+    }
+    
+    .chat-left .chat-content {
+        float: left;
+        margin: 0 0 10px 20px;
+        color: #76838f;
+        background-color: #dfe9ef;
+    }
+    
+    .chat-left .chat-content:before {
+        right: auto;
+        left: -10px;
+        border-right-color: #dfe9ef;
+        border-left-color: transparent;
+    }
+    
+    .chat-left .chat-content+.chat-content:before {
+        border-color: transparent;
+    }
+    
+    .chat-left .chat-time {
+        color: #a3afb7;
+    }
+
+    .panel-heading{
+        display: flex;
+        flex-direction: row;
+        background-color: #197fbc;
+        height: 70px;
+        /* padding: 35px 15px; */
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        
+    }
+    
+    .panel-heading .center{
+        margin-left: 10px;
+    }
+    .panel-heading>div>h1{
+        margin: 0px !important;
+    }
+    .panel-heading>div>img{
+        width: 48px;
+        border-radius: 100%;
+        height: 48px;
+    }
+
+    .close{
+        margin-left: 20px;
+        font-size: 35px;
+    }
+
+    .return  {
+        margin-left: 20px;
+        font-size: 25px;
+        margin-top: 4px;
+        cursor: pointer;
+    }
+    .online{
+        position: absolute;
+        margin: auto !important;
+        margin-left: -14px !important;
+        background-color: green;
+        border-radius: 100%;
+        margin-top: 11px;
+    }
+
+    .panel-footer {
+        padding: 0 30px 15px;
+        background-color: #ced9df;
+        border-top: 1px solid transparent;
+        border-bottom-right-radius: 17px;
+        border-bottom-left-radius: 17px;
+    }
+
+    .panel-footer .input{
+        border-radius: 15px !important;
+    }
+
+    .panel-footer>form{
+        border: 1px;
+        margin-top: 3%;
+    }
+    .faB{
+        background-color: transparent;
+    }
+    .fa{
+        font-size: 19px;
+    }
+    .avatar img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        border: 0 none;
+        border-radius: 1000px;
+    }
+    .chat-avatar .avatar {
+        width: 30px;
+    }
+    .avatar {
+        position: relative;
+        display: inline-block;
+        width: 40px;
+        white-space: nowrap;
+        border-radius: 1000px;
+        vertical-align: bottom;
+    }
+
+
+
+    @media only screen and (max-width: 440px) {
+        .panel-heading{
+            height: 90px;
+        }  
+    }
+
+    @media only screen and (min-width: 360px) {
+        .login>div>img{
+            margin-left: 15%
+        }
+    }
+    @media only screen and (max-width: 360px) {
+        .login>div>img{
+            margin: 8%;
+        }
+    }
