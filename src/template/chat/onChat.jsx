@@ -1,10 +1,15 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { validUser,valids, changeUsername, changeUseremail, addUser } from '../../Actions/Actions'
+import {validUser,valids, changeUsername, changeUseremail, addUser } from '../../Actions/Actions'
+
+import Mensagens from './mensagens'
+
 
 const onChat = props => {
-   
+
+  // props.searchChat();
+  
   return (
     <div className="Mgs">
         <div className="panel-heading">
@@ -23,45 +28,7 @@ const onChat = props => {
         <div className="panel-body">
 
             <div className="chats">
-
-              <div className="chat">
-
-                <div className="chat-avatar">
-                  <a className="avatar avatar-online" data-toggle="tooltip" data-placement="right" data-original-title="June Lane">
-                    <img src="https://bootdey.com/img/Content/avatar/avatar1.png" />
-                    <i></i>
-                  </a>
-                </div>
-
-                <div className="chat-body">
-                  <div className="chat-content">
-                    <p>Olá, sir.
-                      <br/>Testando chat?
-                    </p>
-                    <time className="chat-time">11:37:08 am</time>
-                  </div>
-                </div>
-
-              </div>
-              
-              <div className="chat chat-left">
-
-                <div className="chat-avatar">
-                  <a className="avatar avatar-online" data-toggle="tooltip" href="#" data-placement="left" title="" data-original-title="Edward Fletcher">
-                    <img src="https://bootdey.com/img/Content/avatar/avatar2.png" />
-                    <i></i>
-                  </a>
-                </div>
-
-                <div className="chat-body">
-                  <div className="chat-content">
-                    <p>chegando assim.</p>
-                    <time className="chat-time">11:39:57 am</time>
-                  </div>
-                </div>
-
-              </div>
-              
+                <Mensagens />      
             </div>
 
         </div>
@@ -85,7 +52,7 @@ const onChat = props => {
     )
 }
 
-const mapStateToProps = state =>({nome: state.todo.nome, email: state.todo.email, errorNome: state.todo.errorNome })
+const mapStateToProps = state =>({nome: state.todo.nome, email: state.todo.email, chat:state.todo.chat})
 const mapDispatchtoProps = dispatch =>bindActionCreators({valids, validUser, changeUsername, changeUseremail, addUser }, dispatch)
 export default connect(mapStateToProps, mapDispatchtoProps)(onChat)
 

@@ -38,7 +38,7 @@ const usuarios = props => {
     )
 }
 
-const mapStateToProps = state =>({list: state.todo.list})
+const mapStateToProps = state =>({list: state.todo.list, chat: state.todo.chat })
 const mapDispatchToProps = dispatch => 
     bindActionCreators({ }, dispatch)
 export default connect(mapStateToProps, mapDispatchToProps)(usuarios)

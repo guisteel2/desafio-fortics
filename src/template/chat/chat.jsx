@@ -5,8 +5,7 @@ import Validation from './validation'
 import { valids } from '../../Actions/Actions'
 
 const chat = props => {
-  
-  
+    
     return (
           <div> 
             <div className="open" data-toggle="tooltip" data-placement="top" title="Abrir Chat">

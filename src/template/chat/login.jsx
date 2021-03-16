@@ -1,15 +1,14 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { validUser, changeUsername, changeUseremail, addUser } from '../../Actions/Actions'
+import { valids, addUser, changeUsername, changeUseremail } from '../../Actions/Actions'
 
 const login = props => {
    
     return (
         <div>
             <div className="panel-body">
-            {/* <div data-toggle="tooltip" data-placement="top" title="Fechar"><a onClick={props.check} ><input className="close fas fa-times"></input></a></div> */}
-            <div data-toggle="tooltip" data-placement="top" title="Fechar"><a><input className="close fas fa-times"></input></a></div>
+            <div data-toggle="tooltip" data-placement="top" title="Fechar" onClick= { props.valids } ><a><input className="close fas fa-times"></input></a></div>
                 <div className="chats">
                   <div className="login">         
                     <div>
@@ -26,7 +25,7 @@ const login = props => {
                             <label className="sr-only">Nome</label>
                             <input value={props.nome}  onChange= { props.changeUsername } type="nome" id="inputName" className="form-control" placeholder="Nome"  />
                             <div>{ props.nomeError}</div>
-                            <a className="btn btn-primary" type="submit" onClick={ props.validUser }>Iniciar</a>
+                            <a className="btn btn-primary" type="submit" onClick={ props.addUser }>Iniciar</a>
                             <p className="mt-5 mb-3 text-muted">© 2021-2021</p>
 
                         </form>
@@ -40,5 +39,5 @@ const login = props => {
 }
 
 const mapStateToProps = state =>({nome: state.todo.nome, email: state.todo.email, errorNome: state.todo.errorNome })
-const mapDispatchtoProps = dispatch =>bindActionCreators({validUser, changeUsername, changeUseremail, addUser }, dispatch)
+const mapDispatchtoProps = dispatch =>bindActionCreators({valids, addUser, changeUsername, changeUseremail }, dispatch)
 export default connect(mapStateToProps, mapDispatchtoProps)(login)

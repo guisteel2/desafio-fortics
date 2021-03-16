@@ -84,7 +84,7 @@ html {
         background-color: #d9e0e5 !important;
         border-top-left-radius: 42px;
         border-top-right-radius: 42px;
-        max-width: 330px;
+        max-width: 350px;
         float: inherit;
     }
     .chat-box {
@@ -95,7 +95,7 @@ html {
     }
     
     .chats {
-        padding: 30px 15px;
+        padding: 10px 15px;
     }
 
     .login{
@@ -143,6 +143,24 @@ html {
         color: white;
     
     }
+
+    .chat .chat-body{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .chat .chat-body .chat-content {
+        margin: auto;
+        max-width: 250px;
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+    .chat-content >button{
+        border-radius: 50px;
+        text-align: inherit;
+        
+    }
+    
     
     .chatcorp{
         float:right;
@@ -194,6 +212,15 @@ html {
     
     .chat-content>p:last-child {
         margin-bottom: 0;
+    }
+    
+    .chat-content>button>a{
+        margin-right: 5px;
+        background-color: black;
+        height: 20px;
+        width: 20px;
+        border-radius: 53px;
+        padding: 0px 5px 0px 5px;
     }
     
     .chat-content+.chat-content:before {

@@ -13,13 +13,17 @@ export const changeUseremail = event => ({
 })
 
 export const addUser = (event) =>{
-    //return [{type: 'ADD_NEW_USER'}, searchChat()]
-    //faltando adicionar os middles
-    return dispatch =>{
-        fetch(searchChat())
-        .then(res =>dispatch({type: 'ADD_NEW_USER'}))
-        .then(res =>dispatch(searchChat()))
-    }
+
+    return[
+        {type: 'ADD_NEW_USER'},
+        searchChat()
+    ]
+
+    // return dispatch =>{
+    //     fetch(searchChat())
+    //     .then(res =>dispatch({type: 'ADD_NEW_USER'}))
+    //     .then(res =>dispatch(searchChat()))
+    // }
 }
 
 export const searchUser = (event) =>{
@@ -40,24 +44,27 @@ export const clear = () => {
 //Ajuste mais para frent
 export const validUser = () => {
     return dispatch =>{
-        fetch({type: 'ADD_NEW_USER'})
-        .then(res =>dispatch({type: 'ADD_NEW_USER'}))
+        fetch({type: 'VALIDUSER'})
+        .then(res =>dispatch({type: 'SEARCH_USER_CHAT'}))
         .then(res =>dispatch({type: 'VALIDUSER'}))
-        .then(res =>dispatch({type: 'VALIDUSER'}))
+    }
+}
+
+export const chatHist = (event) => {
+   
+    var valor = event.target.value;
+    return dispatch =>{
+        fetch({type: 'CHATHIST', payload: valor})
+        .then(res =>dispatch({type: 'CHATHIST', payload: valor}))
+        .then(res =>dispatch({type: 'SEARCH_USER_CHAT'}))
     }
 }
 
 
 //valida se achar esta ou nao aberto
 export const valids = () => {
-    var visivel  = $('.fixed-bottom').css("display");
-    if(visivel == "none"){
-        $('.fixed-bottom').show();
-        $('.open').hide()
-    }else{
-        $('.fixed-bottom').hide();
-        $('.open').show();
-    }
     return { type: 'VERIFIC' }
 }
+
+
 

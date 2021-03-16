@@ -10,65 +10,16 @@ import Chat from '../template/chat/chat'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
-
-// const login = props => {
-//     console.log('----?----');
-//     console.log(props);
-//     return (
-//     )
-// }
+import { searchChat } from '../Actions/Actions'
 
 class App extends Component {
-
-    constructor(state) {
-        super();
-        
-      };
-      
-
-    check(){
-        var visivel  = $('.fixed-bottom').css("display");
-        alert(this);
-        if(visivel == "none"){
-            $('.fixed-bottom').show();
-            $('.open').hide()
-        }else{
-            $('.fixed-bottom').hide();
-            $('.open').show();
-        }
-        
-        if(this.state.description == "Deslogado"){
-            alert('Deslogado')
-        }else{
-            alert('Logado')
-        }
-
-    }
-
-    validUser(){
-        console.log('-------------------kkkkkkkkkkkkk');
-        if(this.state.description == "Deslogado"){
-            this.setState({...this.state, description: "Logado"})
-        }else{
-            this.setState({...this.state, description: "Deslogado"})
-        }
-    }
-
-    addNome(e){
-        this.setState({...this.state, nome: e.target.value})
-    }
-
-    addEmail(e){
-        this.setState({...this.state, email: e.target.value})
-    }
-
-   
-    render(){
+    
+    render(){    
         return (
                 <div className='contender'>
                     <Header />
                     <Routes />
-                    <Chat   check={this.check} validUser={this.validUser}/>
+                    <Chat />
                 </div>
         )
     }
@@ -77,5 +28,5 @@ class App extends Component {
 
 const mapStateToProps = state =>({list: state.todo.list})
 const mapDispatchToProps = dispatch => 
-    bindActionCreators({}, dispatch)
+    bindActionCreators({searchChat}, dispatch)
 export default connect(mapStateToProps, mapDispatchToProps)(App)
