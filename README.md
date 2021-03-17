@@ -31,9 +31,9 @@ OBS: Todos os componets/bibliotecas que irei usar para a criação desse desafio
 ----Sobre---</br>
 App(X)</br>
 Routes(X)</br>
-Reducers( - Em desenvolvimento - : Faltando ajuste )</br>
-Class( --Em desenvolvimento : a classe chamada nesse momento esta fixa)</br>
-Actions( --Em desenvolvimento : Faltando criar action/funçoes para utilizar o React com redux para poder controlar as props) </br>
+Reducers(X)</br>
+Class(x)</br>
+Actions(-- Faltando Chamar o Axios para traver do moongo) </br>
 
 
 
