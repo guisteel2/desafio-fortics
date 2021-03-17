@@ -2,6 +2,12 @@ html {
     height: 100% !important;
 }
 
+
+button:focus{
+    outline: 0 !important;
+    outline-style: none;
+}
+
 .body{
     height: 100%!important; 
     width: 100%!important;

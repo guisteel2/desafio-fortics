@@ -11,7 +11,7 @@ export default props => {
                         <p>Para facilitar seu atendimento listei algumas opções que podem ajudar:</p>
                         {/* <div className="chat-avatar">
                             <a className="avatar avatar-online" data-toggle="tooltip" data-placement="right" data-original-title="June Lane">
-                                <img src="https://bootdey.com/img/Content/avatar/avatar1.png" />
+                                <img src="https://yt3.ggpht.com/ytc/AAUvwnj113LDVrY8FF0ulblIPF4cgFF4F2r3SNoTFE6Q=s900-c-k-c0x00ffffff-no-rj" />
                                 <i></i>
                             </a>
                         </div> */}
@@ -34,7 +34,7 @@ export default props => {
                 <div className="chat">
                     <div className="chat-avatar">
                         <a className="avatar avatar-online" data-toggle="tooltip" data-placement="right" data-original-title="June Lane">
-                            <img src="https://bootdey.com/img/Content/avatar/avatar1.png" />
+                            <img src="https://yt3.ggpht.com/ytc/AAUvwnj113LDVrY8FF0ulblIPF4cgFF4F2r3SNoTFE6Q=s900-c-k-c0x00ffffff-no-rj" />
                             <i></i>
                         </a>
                     </div>
@@ -55,7 +55,7 @@ export default props => {
                 <div className="chat">
                     <div className="chat-avatar">
                         <a className="avatar avatar-online" data-toggle="tooltip" data-placement="right" data-original-title="June Lane">
-                            <img src="https://bootdey.com/img/Content/avatar/avatar1.png" />
+                            <img src="https://yt3.ggpht.com/ytc/AAUvwnj113LDVrY8FF0ulblIPF4cgFF4F2r3SNoTFE6Q=s900-c-k-c0x00ffffff-no-rj" />
                             <i></i>
                         </a>
                     </div>
@@ -76,14 +76,14 @@ export default props => {
                 <div className="chat">
                     <div className="chat-avatar">
                         <a className="avatar avatar-online" data-toggle="tooltip" data-placement="right" data-original-title="June Lane">
-                            <img src="https://bootdey.com/img/Content/avatar/avatar1.png" />
+                            <img src="https://yt3.ggpht.com/ytc/AAUvwnj113LDVrY8FF0ulblIPF4cgFF4F2r3SNoTFE6Q=s900-c-k-c0x00ffffff-no-rj" />
                             <i></i>
                         </a>
                     </div>
 
                     <div className="chat-body">
                         <div className="chat-content">
-                            <p>Olá, Espere criar no banco</p>
+                            <p>Olá, Vincular alguns parametros(Banco)</p>
                             <time className="chat-time">11:37:08 am</time>
                         </div>
                     </div>
@@ -94,7 +94,7 @@ export default props => {
             <div className="chat">
             <div className="chat-avatar">
                 <a className="avatar avatar-online" data-toggle="tooltip" data-placement="right" data-original-title="June Lane">
-                    <img src="https://bootdey.com/img/Content/avatar/avatar1.png" />
+                    <img src="https://yt3.ggpht.com/ytc/AAUvwnj113LDVrY8FF0ulblIPF4cgFF4F2r3SNoTFE6Q=s900-c-k-c0x00ffffff-no-rj" />
                     <i></i>
                 </a>
             </div>
