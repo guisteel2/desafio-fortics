@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { chatHist, searchChat } from '../../Actions/Actions'
+import { validUser, chatHist, searchChat } from '../../Actions/Actions'
 
 import ChatAssistant from './chatAssistant'
 import ChatUser from './chatUser'
@@ -35,7 +35,7 @@ const mensagens = props => {
             
             //Resposta/chamadas do chat
             if(props.chat[i]['resp'] == 1 || props.chat[i]['resp'] == "helps"){
-                divs = [divs,<ChatAssistant chatHist={props.chatHist} key= {aux} compAssistant = '1' />];  
+                divs = [divs,<ChatAssistant validUser={props.validUser} chatHist={props.chatHist} key= {aux} compAssistant = '1' />];  
                 aux +=1;
             }else if(props.chat[i]['resp'] == 2 ){
                 divs = [divs,<ChatAssistant key= {aux} compAssistant = '2' />];  
@@ -65,5 +65,5 @@ const mensagens = props => {
 }
 
 const mapStateToProps = state =>({nome: state.todo.nome, email: state.todo.email, chat: state.todo.chat})
-const mapDispatchtoProps = dispatch =>bindActionCreators({chatHist, searchChat}, dispatch)
+const mapDispatchtoProps = dispatch =>bindActionCreators({validUser, chatHist, searchChat}, dispatch)
 export default connect(mapStateToProps, mapDispatchtoProps)(mensagens)

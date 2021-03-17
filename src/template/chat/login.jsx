@@ -5,6 +5,12 @@ import { valids, addUser, changeUsername, changeUseremail } from '../../Actions/
 
 const login = props => {
    
+    const ListaUsuario = (e) =>{
+    
+        props.addUser();
+
+    }
+
     return (
         <div>
             <div className="panel-body">
@@ -13,19 +19,20 @@ const login = props => {
                   <div className="login">         
                     <div>
                         <img src="https://www.fortics.com.br/wordpress/wp-content/uploads/2021/02/Asset-1.png" />
-                        <h1>Precisamos de algumas informaçoes antes de inicar o atendimento</h1> 
+                        <h1>Precisamos de algumas informaçoes antes de iniciar o atendimento</h1> 
                     </div>
                     
                     <div>
-                        <form className="form-signin">
+                        <form className="form-signin" onSubmit={ListaUsuario}>
             
-                            <label className="sr-only">Endereço de email</label>
-                            <input value={props.email} onChange= { props.changeUseremail } type="email" id="inputEmail" className="form-control" placeholder="Endereço de email" />
                             
-                            <label className="sr-only">Nome</label>
-                            <input value={props.nome}  onChange= { props.changeUsername } type="nome" id="inputName" className="form-control" placeholder="Nome"  />
-                            <div>{ props.nomeError}</div>
-                            <a className="btn btn-primary" type="submit" onClick={ props.addUser }>Iniciar</a>
+                            <label className="sr-only">Endereço de email</label>
+                            <input value={props.email} onChange= { props.changeUseremail } type="email" id="inputEmail" className="form-control" placeholder="Endereço de email" required/>
+                            
+                            <input value={props.nome}  onChange= { props.changeUsername } type="nome" id="inputName" className="form-control" placeholder="Digite um nome" required />
+        
+                            <button className="btn btn-primary" type="submit" >Iniciar</button>
+    
                             <p className="mt-5 mb-3 text-muted">© 2021-2021</p>
 
                         </form>

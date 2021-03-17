@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import {validUser,valids, changeUsername, changeUseremail, addUser } from '../../Actions/Actions'
+import {chatHist, inputB, validUser,valids, changeUsername, changeUseremail, addUser } from '../../Actions/Actions'
 
 import Mensagens from './mensagens'
 
@@ -40,10 +40,10 @@ const onChat = props => {
                   <button className="btn faB" type="button"><i className="far fa-grin-beam" aria-hidden="true"></i></button>
                 </span>
 
-                <input type="text" className="form-control input" placeholder="Sem envio!" />
+                <input type="text" className="form-control input" value={props.input} onChange={props.inputB} />
 
                 <span className="input-group-btn">
-                  <button className="btn faB" type="button"><i className="fas fa-paperclip" aria-hidden="true"></i></button>
+                  <button className="btn faB btn-primary" value="4" onClick={props.chatHist} type="button"><i className="fas fa-upload" aria-hidden="true"></i></button>
                 </span>
               </div>
             </form> 
@@ -52,7 +52,7 @@ const onChat = props => {
     )
 }
 
-const mapStateToProps = state =>({nome: state.todo.nome, email: state.todo.email, chat:state.todo.chat})
-const mapDispatchtoProps = dispatch =>bindActionCreators({valids, validUser, changeUsername, changeUseremail, addUser }, dispatch)
+const mapStateToProps = state =>({nome: state.todo.nome, email: state.todo.email, chat:state.todo.chat, input: state.todo.inputMeg})
+const mapDispatchtoProps = dispatch =>bindActionCreators({chatHist, inputB, valids, validUser, changeUsername, changeUseremail, addUser }, dispatch)
 export default connect(mapStateToProps, mapDispatchtoProps)(onChat)
 

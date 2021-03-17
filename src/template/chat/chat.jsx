@@ -20,7 +20,6 @@ const chat = props => {
                 <div className="chatcorp col-md-7 col-xs-12 col-md-offset-2">
                   <div className="chat painel" id="chat">
                     <Validation />
-                    {/* <Validation user = {props.user} check={props.check} validUser={props.validUser} addNome={props.addNome} addEmail={props.addEmail} /> */}
                   </div>
                 </div>
             </div>

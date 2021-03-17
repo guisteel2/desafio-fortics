@@ -14,16 +14,13 @@ export const changeUseremail = event => ({
 
 export const addUser = (event) =>{
 
-    return[
-        {type: 'ADD_NEW_USER'},
-        searchChat()
-    ]
-
-    // return dispatch =>{
-    //     fetch(searchChat())
-    //     .then(res =>dispatch({type: 'ADD_NEW_USER'}))
-    //     .then(res =>dispatch(searchChat()))
-    // }
+    return dispatch =>{
+        fetch(event)
+        .then(res =>dispatch({type: 'SEARCH_USER'}))
+        .then(res =>dispatch({type: 'ADD_NEW_USER'}))
+        .then(res =>dispatch(searchChat()))
+    }
+  
 }
 
 export const searchUser = (event) =>{
@@ -60,6 +57,11 @@ export const chatHist = (event) => {
     }
 }
 
+
+export const inputB = event => ({
+    type: 'INPUTB',
+    payload: event.target.value
+})
 
 //valida se achar esta ou nao aberto
 export const valids = () => {
